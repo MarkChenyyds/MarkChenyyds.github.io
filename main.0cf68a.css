@@ -2670,6 +2670,7 @@ pre .id {
     margin-bottom: 0;
   }
   .left-col {
+    display: none;
     background-color: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -2679,7 +2680,7 @@ pre .id {
     opacity: 1;
     transition: all 0.2s ease-in;
     height: 100%;
-    z-index: 999;
+    /* z-index: 999; */
     overflow: hidden;
     overflow-y: auto;
     margin-bottom: 15px;
