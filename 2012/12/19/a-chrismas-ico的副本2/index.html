@@ -149,7 +149,8 @@ var _hmt = _hmt || [];
 </div>
 
     </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse" style="background: url(/assets/img/funingna.jpg) no-repeat 100%;background-size:cover;opacity:0.7;filter:alpha(opacity=70);">
+    <!-- <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse"> -->
       
 <nav id="mobile-nav">
   	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
@@ -393,7 +394,7 @@ var _hmt = _hmt || [];
  
 <nav id="article-nav">
   
-    <a href="/2012/12/19/a-chrismas-ico%E7%9A%84%E5%89%AF%E6%9C%AC3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2012/12/19/a-chrismas-ico%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -402,6 +403,11 @@ var _hmt = _hmt || [];
       </div>
     </a>
   
+  
+    <a href="/2012/12/19/a-chrismas-ico%E7%9A%84%E5%89%AF%E6%9C%AC3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">圣诞到了，帮修改一个头像</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
   <aside class="wrap-side-operation">
@@ -418,15 +424,7 @@ var _hmt = _hmt || [];
         
         
     </div>
-</aside>     <div id="SOHUCS" sid="a-chrismas-ico的副本2" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "cysX3aGWt",
-        conf: "prod_1dcda447175aada96edcdb7e412338fa"
-    });
-</script>
-</script>    
+</aside>       
 
           </div>
         </div>
@@ -8708,5 +8706,23 @@ var _hmt = _hmt || [];
 
 </div>
   </div>
+  <!-- 动态线条背景 -->
+  
+    <script type="text/javascript"
+    color="0,0,255" opacity='0.9' zIndex="-1" count="300" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+    
+    <!-- 雪花特效 -->
+
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <!-- <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script> -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
+  
 </body>
 </html>

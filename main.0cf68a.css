@@ -1844,7 +1844,8 @@ pre .id {
   border: 1px solid #ddd;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  background: #fff;
+  /*background: #fff;*/
+  background: rgba(255, 255, 255, 0.5);
   transition: all 0.2s ease-in;
 }
 .article img {
@@ -1921,7 +1922,7 @@ pre .id {
   margin: 0 0 1.75em;
 }
 .article-inner {
-  border-color: #d1d1d1;
+  background-color: rgba(193, 194, 195, 0.6);
 }
 .article-inner h1 {
   font-size: 28px;
@@ -2669,7 +2670,19 @@ pre .id {
     margin-bottom: 0;
   }
   .left-col {
-    display: none;
+    background-color: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    );
+    width: 300px;
+    position: fixed;
+    opacity: 1;
+    transition: all 0.2s ease-in;
+    height: 100%;
+    z-index: 999;
+    overflow: hidden;
+    overflow-y: auto;
+    margin-bottom: 15px;
   }
   .mid-col {
     left: 0;
@@ -2903,11 +2916,23 @@ pre .id {
     float: none;
   }
   .archives-wrap {
-    margin: 10px 10px 0;
-    padding: 10px;
+    /* margin: 10px 10px 0;
+    padding: 10px; */
+    position: relative;
+    margin: 0 30px;
+    padding-right: 60px;
+    border-bottom: 1px solid #eee;
+    /*background: #fff;*/
+    background-color: rgba(236, 236, 236, 0.6);
   }
   .archives-wrap .archive-article-title {
     font-size: 16px;
+    font-weight: bold;
+    /*color: #333;*/
+    /*transition: color .3s*/
+    background: transparent;
+    text-decoration: none;
+    color: #af9;
   }
   .archives-wrap .archive-year-wrap {
     position: relative;
