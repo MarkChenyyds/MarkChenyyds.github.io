@@ -19,7 +19,7 @@
 <meta property="og:description" content="personal-blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-18T07:25:45.000Z">
-<meta property="article:modified_time" content="2023-11-18T07:29:23.012Z">
+<meta property="article:modified_time" content="2023-11-25T07:19:02.623Z">
 <meta property="article:author" content="MarkChen">
 <meta property="article:tag" content="前端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta name="twitter:card" content="summary">  
@@ -53,7 +53,57 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow"  style="background: url(/assets/img/funingna.jpg) no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
-        
+      
+<!-- 这是刚刚生成的js代码 -->
+<div id="tp-weather-widget"></div>
+<script>
+  (function (a, h, g, f, e, d, c, b) {
+    b = function () {
+      d = h.createElement(g);
+      c = h.getElementsByTagName(g)[0];
+      d.src = e;
+      d.charset = "utf-8";
+      d.async = 1;
+      c.parentNode.insertBefore(d, c);
+    };
+    a["SeniverseWeatherWidgetObject"] = f;
+    a[f] ||
+      (a[f] = function () {
+        (a[f].q = a[f].q || []).push(arguments);
+      });
+    a[f].l = +new Date();
+    if (a.attachEvent) {
+      a.attachEvent("onload", b);
+    } else {
+      a.addEventListener("load", b, false);
+    }
+  })(
+    window,
+    document,
+    "script",
+    "SeniverseWeatherWidget",
+    "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" +
+      parseInt((new Date().getTime() / 100000000).toString(), 10)
+  );
+  window.SeniverseWeatherWidget("show", {
+    flavor: "bubble",
+    location: "WWMKWU0KKVZP",
+    geolocation: true,
+    language: "zh-Hans",
+    unit: "c",
+    theme: "auto",
+    token: "d51db339-2302-4fba-bb55-0fd112095068",
+    hover: "enabled",
+    container: "tp-weather-widget",
+  });
+</script>
+<style>
+  #tp-weather-widget {
+    position: absolute;
+    z-index: 1000;
+  }
+</style>
+   
 
 <div
   class="overlay"
@@ -76,11 +126,7 @@ var _hmt = _hmt || [];
         
         <li><a href="/">主页</a></li>
         
-        <li><a href="/categories">分类</a></li>
-        
         <li><a href="/archives">归档</a></li>
-        
-        <li><a href="/tags">标签</a></li>
         
       </ul>
     </nav>
@@ -166,10 +212,6 @@ var _hmt = _hmt || [];
 			
 				
 			
-				
-			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -185,16 +227,12 @@ var _hmt = _hmt || [];
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/categories">分类</a></li>
-		        
-					<li style="width: 25%"><a href="/archives">归档</a></li>
-		        
-					<li style="width: 25%"><a href="/tags">标签</a></li>
+					<li style="width: 50%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -210,8 +248,8 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             <article
-  id="page-"
-  class="article article-type-page "
+  id="tags-"
+  class="article article-type-tags "
   itemscope
   itemprop="blogPost"
 >
@@ -269,7 +307,65 @@ var _hmt = _hmt || [];
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-         
+      
+      <!-- 这里也可用type去判断，放在tags标签页或者categories分类页都可以 -->
+      <hr />
+      <br />
+      
+      <div class="tags">
+        <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 16px; color: #00f">杂谈</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 16px; color: #00f">设计</a>
+      </div>
+
+      <!-- 这里也可以放进css文件中，这样阅读性好些 -->
+      <style>
+        .category-list li {
+          display: inline-block;
+          margin: 0 1em 0.5em 0;
+          padding: 4px;
+          border: 1px solid green;
+          font-size: 1.2em;
+        }
+        .category-list a {
+          color: #ffffff;
+        }
+        .category-list-item {
+          background-color: #55daff;
+          border-radius: 15%;
+          opacity: 0.5;
+        }
+
+        .category-list-item:hover a {
+          color: #c16431;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        .category-list-count {
+          margin-left: 2px;
+          font-size: 0.9em;
+        }
+        .article-entry ul li:before {
+          display: none;
+        }
+
+        .tags {
+          max-width: 40em;
+          margin: 2em auto;
+          margin-top: 0em;
+        }
+        .tags a {
+          margin-right: 1em;
+          border-bottom: 1px solid blue;
+          line-height: 65px;
+          white-space: nowrap;
+        }
+        .tags a:hover {
+          border-bottom: 2px solid green;
+          font-style: italic;
+          color: #22323a;
+          text-decoration: none;
+        }
+      </style>
+          
       <div class="page-reward">
         <a
           target="_parent"
@@ -376,53 +472,7 @@ var _hmt = _hmt || [];
         
         
     </div>
-</aside>  
-<section id="comments" class="comments">
-  <style>
-    .comments {
-      margin: 30px;
-      padding: 10px;
-      background: #fff;
-    }
-    @media screen and (max-width: 800px) {
-      .comments {
-        margin: auto;
-        padding: 10px;
-        background: #fff;
-      }
-    }
-  </style>
-  <div id="vcomment" class="comment"></div>
-<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
-<script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<!-- <script src="../../../source/av-min.js"></script>
-<script src="../../../source/Valine.min.js"></script> -->
-<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  var notify = "true" == true ? true : false;
-  var verify = "false" == true ? true : false;
-  new Valine({
-    av: AV,
-    el: "#vcomment",
-    notify: notify,
-    appId: "HTCqiUDSsPSLkrN899Kx9ZZv-MdYXbMMI",
-    appKey: "jd5O7cOZVvi21naKzDqjzYxV",
-    placeholder: "Just go go ^_^",
-    avatar: "monsterid",
-    serverURLs: "https://htcqiuds.api.lncldglobal.com",
-    enable: "true",
-    pageSize: "10",
-    visitor: "true",
-    // 自定义表情包
-    // emojiMaps: {
-    //           "001":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/001.png",
-    //       }
-  });
-</script>
-
-</section>
-      
+</aside> 
 
           </div>
         </div>
@@ -453,6 +503,70 @@ var _hmt = _hmt || [];
     </div>
   </div>
 </footer>
+
+<style>
+  /* 隐藏 valine 的 powered by */
+  .vpower.txt-right {
+    display: none;
+  }
+
+  /*回复按钮颜色*/
+  #vcomment .vat {
+    color: rgb(0, 0, 0);
+    font-size: 0.7125rem;
+    padding: 0px 0.8rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-image: initial;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+  }
+  /*提交评论按钮颜色*/
+  #vcomment button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    border-color: rgb(0, 0, 0);
+    transition: all 0.3s ease 0s;
+  }
+
+  /* 评论框美化 */
+  #comments .veditor {
+    /* min-height: 10rem; */
+    background-image: url(https://cdn.statically.io/gh/MarkChenyyds/blogPic@main/test/xiaojinyu.5dshixumhx00.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  /*如果你还想修改鼠标移动到【回复】按钮或者【提交】按钮显示的颜色就修改*/
+
+  #vcomment .vat:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 0.7125rem;
+    padding: 0px 0.8rem;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+  }
+  /*提交评论按钮变颜色*/
+  #vcomment button:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    border-color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+  }
+</style>
 
 <!--页面点击小红心-->
 <!-- <script type="text/javascript" src="/love.js"></script> -->
