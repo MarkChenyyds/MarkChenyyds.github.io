@@ -1,0 +1,28 @@
+<div id="vcomment" class="comment"></div>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<!-- <script src="../../../source/av-min.js"></script>
+<script src="../../../source/Valine.min.js"></script> -->
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var notify = "<%= theme.valine.notify %>" == true ? true : false;
+  var verify = "<%= theme.valine.verify %>" == true ? true : false;
+  new Valine({
+    av: AV,
+    el: "#vcomment",
+    notify: notify,
+    appId: "<%= theme.valine.appid %>",
+    appKey: "<%= theme.valine.appkey %>",
+    placeholder: "<%= theme.valine.placeholder %>",
+    avatar: "<%= theme.valine.avatar %>",
+    serverURLs: "https://htcqiuds.api.lncldglobal.com",
+    enable: "<%= theme.valine.enable %>",
+    pageSize: "<%= theme.valine.pageSize %>",
+    visitor: "<%= theme.valine.visitor %>",
+    // 自定义表情包
+    // emojiMaps: {
+    //           "001":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/001.png",
+    //       }
+  });
+</script>
