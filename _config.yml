@@ -175,3 +175,55 @@ live2d:
   react:
     opacityDefault: 0.7
     opacityOnHover: 0.2
+
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true # 是否对HTML标签进行解析，false时HTML将按照原样输出
+    xhtmlOut: false # 是否需要满足严格的XHTML格式，换行为<br />
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: "“”‘’"
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-emoji # add emoji
+  anchors:
+    # Minimum level for ID creation. (Ex. h2 to h6)
+    level: 2
+    # A suffix that is prepended to the number given if the ID is repeated.
+    collisionSuffix: "v"
+    # If `true`, creates an anchor tag with a permalink besides the heading.
+    permalink: true
+    # Class used for the permalink anchor tag.
+    permalinkClass: header-anchor
+    # The symbol used to make the permalink
+    permalinkSymbol: ¶
+
+# hexo-neat
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css
+neat_css:
+  enable: true
+  exclude:
+    - "**/*.min.css"
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - "**/*.min.js"
+    - "**/jquery.fancybox.pack.js"
+    - "**/index.js"
