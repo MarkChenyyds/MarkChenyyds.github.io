@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MarkChen个人博客</title>
+  
+  <subtitle>道法自然</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-12-02T06:37:14.128Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>MarkChen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test 圣诞到了，帮修改一个头像</title>
+    <link href="http://example.com/article/8bae60c8.html"/>
+    <id>http://example.com/article/8bae60c8.html</id>
+    <published>2012-12-19T06:48:00.000Z</published>
+    <updated>2023-12-02T06:37:14.128Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/assets/blogImg/xmas_ico0.jpg" alt="ico原来的样子"></p><blockquote><p>帮忙把这只狐狸塞到圣诞袜子里或者带上圣诞帽~~~~ ——鱼头<img class="emoji" draggable="false" alt="😊" src="https://twemoji.maxcdn.com/v/14.0.2/72x72/1f60a.png"/> ?</p></blockquote><span id="more"></span><p>鱼头君，我终于做好了！花了我整整……好吧，其实是一直偷懒没做我就承认了。<br>按照你的要求，弄成这样的：<br><img src="/assets/blogImg/xmas_ico1.jpg" alt="狐狸妹纸太大我塞不下-_-!"><br>或者这样的：<br><img src="/assets/blogImg/xmas_ico2.jpg" alt="圣诞帽的狐狸妹纸"><br>其实我最喜欢的是这样的：<br><img src="/assets/blogImg/xmas_ico3.jpg" alt="呆萌傻缺才是我得菜好么"></p><p><strong>Happy Chrismas!</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/assets/blogImg/xmas_ico0.jpg&quot; alt=&quot;ico原来的样子&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;帮忙把这只狐狸塞到圣诞袜子里或者带上圣诞帽~~~~ ——鱼头&lt;img class=&quot;emoji&quot; draggable=&quot;false&quot; alt=&quot;😊&quot; src=&quot;https://twemoji.maxcdn.com/v/14.0.2/72x72/1f60a.png&quot;/&gt; ?&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="设计" scheme="http://example.com/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="杂谈" scheme="http://example.com/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+</feed>
