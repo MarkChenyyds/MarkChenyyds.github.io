@@ -13,7 +13,7 @@ subnav:
   github: "https://github.com/MarkChenyyds"
   zhihu: "https://www.zhihu.com/people/wan-ju-xiong-zhi-mi"
   mail: "mailto:markchen_98@qq.com"
-  #rss: ""
+  rss: "atom.xml"
   #weibo: ""
   #psn: "#"
   #douban: "#"

@@ -2,6 +2,21 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
+
+
+    <!-- 隐藏左边栏目按钮 -->
+    <% if (page.path === 'index.html'||page.path === 'archives/index.html'||page.path === 'photos/index.html') { %>
+      <!-- 在首页的处理逻辑 -->
+    <% } else { %>
+      <!-- 在其他页面的处理逻辑 -->
+      <div class="mymenucontainer" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <!-- <div class="bar2"></div>
+        <div class="bar3"></div> -->
+      </div>
+    <% } %>
+    
+
     <div class="left-col" q-class="show:isShow"  style="background: <%= theme.style && theme.style.left_ground.enable && theme.style.left_ground.url ? theme.style.left_ground.url : theme.style.left_ground.default %>">
       <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
     </div>
@@ -50,4 +65,33 @@
   <script type="text/javascript" src="/fireworks.js"></script>
 <% } %>
 </body>
+<script>
+  //  隐藏左边栏目按钮
+  var hide = false;
+    function myFunction(x) {
+        // x.classList.toggle("change");
+        if(hide == false){
+          $(".bar1").css('background-image', 'url(https://cdn.jsdelivr.net/gh/MarkChenyyds/resources@main/hexo-blog/categories.png)');
+          $(".left-col").css('display', 'none');
+          $(".mid-col").css("left", 6);
+          $(".tools-col").css('display', 'none');
+          $(".tools-col.hide").css('display', 'none');
+          hide = true;
+
+          $(".mymenucontainer").css('left', '0');
+
+        }else{
+          $(".bar1").css('background-image', 'url(https://cdn.jsdelivr.net/gh/MarkChenyyds/resources@main/hexo-blog/cross.png)');
+          $(".left-col").css('display', '');
+          $(".mid-col").css("left", 300);
+          $(".tools-col").css('display', '');
+          $(".tools-col.hide").css('display', '');
+          hide = false;
+
+          $(".mymenucontainer").css('left', '260px');
+        }
+    }
+//
+
+</script>
 </html>

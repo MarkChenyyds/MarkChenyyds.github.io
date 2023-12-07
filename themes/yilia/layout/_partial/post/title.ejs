@@ -1,15 +1,48 @@
 <% if (post.link){ %>
-  <h1 itemprop="name">
-    <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
-  </h1>
-<% } else if (post.title){ %>
-  <% if (index){ %>
-    <h1 itemprop="name">
-      <a class="<%= class_name %>" href="<%- url_for(post.path) %>"><%= post.title %></a>
-    </h1>
-  <% } else { %>
-    <h1 class="<%= class_name %>" itemprop="name">
-      <%= post.title %>
-    </h1>
-  <% } %>
+<h1 itemprop="name">
+  <a
+    class="<%= class_name %>"
+    href="<%- url_for(post.link) %>"
+    target="_blank"
+    itemprop="url"
+    ><%= post.title %></a
+  >
+</h1>
+<% } else if (post.title){ %> <% if (index){ %>
+<h1 itemprop="name">
+  <a
+    id="myLink"
+    class="<%= class_name %>"
+    href="<%- url_for(post.path) %>""
+    ><%= post.title %></a
+  >
+</h1>
+<!-- <script>
+  document.getElementById("myLink").addEventListener("click", function() {
+    displayStyle = $(".left-col").css("display");
+    console.log("displayStyle:", displayStyle);
+    sessionStorage.setItem('displayStyle', displayStyle);
+    // 跳转到链接
+    window.location.href = this.getAttribute("href");
+    });
+</script> -->
+<% } else { %>
+<!-- <h1 class="<%= class_name %>" itemprop="name"><%= post.title %></h1>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var oldDisplay = sessionStorage.getItem('displayStyle');
+    console.log("oldDisplay:", oldDisplay);
+    if (oldDisplay == "none") {
+      $(".mymenucontainer").addClass("change");
+      $(".left-col").css("display", "none");
+      $(".mid-col").css("left", 6);
+      $(".tools-col").css("display", "none");
+      $(".tools-col.hide").css("display", "none");
+    }
+    console.log("oldDisplay:", oldDisplay);
+  });
+  
+</script> -->
+<% } %>
 <% } %>
