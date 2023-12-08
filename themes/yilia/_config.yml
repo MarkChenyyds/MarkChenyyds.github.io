@@ -65,7 +65,7 @@ google_analytics: false
 favicon: /assets/img/earth.ico #页面主题小图标
 
 #你的头像url
-avatar: /assets/img/lanyangyang.jpg
+avatar: /assets/img/lanyangyang_new.jpg
 
 #头像是否旋转(如果不要旋转取false)
 avatarrotation: true
@@ -172,7 +172,7 @@ xinzhi_weather: true
 
 # 动态线条效果，会向鼠标集中
 canvas_nest:
-  enable: true
+  enable: false
   color: "206, 187, 95"
   pointColor: "249, 72, 97"
   opacity: "0.9"

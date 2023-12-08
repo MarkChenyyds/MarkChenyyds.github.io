@@ -40,7 +40,7 @@
     <%- partial('_partial/viewer') %>
   </div>
   <!-- 动态线条背景 -->
-  <% if (theme.canvas_nest){ %>
+  <% if (theme.canvas_nest.enable){ %>
     <script type="text/javascript"
     color="0,0,255" opacity='0.9' zIndex="-1" count="300" src="<%- url_for('//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js') %>"></script>
     <% } %>
@@ -62,8 +62,12 @@
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
   <script type="text/javascript" src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/fireworks.js"></script>
+  <script type="text/javascript" src="/js/fireworks.js"></script>
 <% } %>
+<!-- 代码块复制功能 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
 </body>
 <script>
   //  隐藏左边栏目按钮
