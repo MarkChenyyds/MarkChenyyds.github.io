@@ -99,7 +99,7 @@ valine:
   verify: false #验证码，verify和notify这两个最好就别动了
   notify: true #评论回复提醒
   avatar: monsterid #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
-  placeholder: Just go go ^_^ #评论框占位符
+  placeholder: 欢迎评论 ^_^ #评论框占位符
   enable: true # 设置为true，默认为false
   pageSize: 10 # 分页大小，10页就自动分页
   visitor: true # 是否允许游客评论 ，进入官网查看设置：https://valine.js.org/visitor.html
