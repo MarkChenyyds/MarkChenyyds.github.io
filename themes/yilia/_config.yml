@@ -60,8 +60,8 @@ top: true
 open_in_new: true
 
 # Miscellaneous
-baidu_analytics: "a30844fa2bcbce0a9e001fe06cefeddf"
-google_analytics: false
+baidu_analytics: "f3119e6a4320fc4766f0d145d156f38a"
+google_analytics: "G-KJFWQL4MYJ"
 favicon: /assets/img/earth.ico #页面主题小图标
 
 #你的头像url

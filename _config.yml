@@ -13,7 +13,7 @@ timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://markchenyyds.github.io
 #permalink: :year/:month/:day/:title/
 permalink: article/:abbrlink.html
 abbrlink:
@@ -213,6 +213,7 @@ neat_enable: true
 neat_html:
   enable: true
   exclude:
+    - "./source/googlebc1349964f4e9de5.html"
 # 压缩css
 neat_css:
   enable: true
@@ -237,3 +238,8 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
+
+# google-sitemap
+sitemap:
+  path:
+    - sitemap.xml
