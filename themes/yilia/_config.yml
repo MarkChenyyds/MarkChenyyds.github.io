@@ -108,26 +108,26 @@ valine:
 style:
   # 右滑板块背景
   #slider: "linear-gradient(200deg,#a0cfe4,#e8c37e)"
-  slider: "linear-gradient(200deg,#ccc,#000)"
+  slider: "linear-gradient(200deg,#E1FFFF,#008080)"
   # 左侧头像板块动态图效果
   gif:
     # 是否启用
-    enable: true
+    enable: false
     # 自定义背景图路径(默认可以不设置，提供默认背景图biubiubiu.gif)
     path: /assets/img/mrfz.gif
   # 头像上面的背景颜色 e.g. linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))
   # header: '#D3D1DC'
-  header: "rgba(0,0,0,0.5)" #设置背景透明度，不然头像上方是默认色
+  header: "rgba(176,244,230,1)" #设置背景透明度，不然头像上方是默认色
   #左侧头像板块的背景颜色(IE兼容设置：filter:alpha(opacity=80);)
   left_ground:
     enable: true
-    default: "rgba(0,0,0,0.5)"
-    url: "url(/assets/img/funingna.jpg) no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);"
+    default: "rgba(173,216,230,1)"
+    # url: "url(/assets/img/funingna.jpg) no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);"
   # 正文的背景颜色(IE兼容设置：opacity:0.8;filter:alpha(opacity=80);)
   article_ground:
     enable: true
-    default: "rgba(25, 25, 25, 0)" #设置背景透明度
-    url: "url(/assets/img/funingna.jpg) no-repeat 100%;background-size:cover;opacity:0.7;filter:alpha(opacity=70);"
+    default: "rgba(95, 158, 160, 1)" #设置背景透明度
+    #url: "url(/assets/img/funingna.jpg) no-repeat 100%;background-size:cover;opacity:0.7;filter:alpha(opacity=70);"
 
 # slider的设置
 slider:

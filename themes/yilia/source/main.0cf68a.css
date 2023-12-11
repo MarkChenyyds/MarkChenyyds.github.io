@@ -926,6 +926,14 @@ html {
   -webkit-box-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  /* 1 */
+  background: #eee
+    url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC)
+    repeat;
+  text-shadow: 5px -5px black, 4px -4px white;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 .left-col #header .header-menu li {
   cursor: default;
@@ -934,9 +942,62 @@ html {
   font-size: 14px;
   min-width: 300px;
 }
+.left-col #header .totalTopic {
+  position: relative;
+  letter-spacing: 0.07em;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0 auto;
+  color: hsl(184, 80%, 25%);
+  text-shadow: 0 0 1px currentColor,
+    /*highlight*/-1px -1px 1px hsl(184, 80%, 50%), 0 -1px 1px hsl(184, 80%, 55%),
+    1px -1px 1px hsl(184, 80%, 50%),
+    /*light shadow*/ 1px 1px 1px hsl(184, 80%, 10%),
+    0 1px 1px hsl(184, 80%, 10%), -1px 1px 1px hsl(184, 80%, 10%),
+    /*outline*/-2px -2px 1px hsl(184, 80%, 15%),
+    -1px -2px 1px hsl(184, 80%, 15%), 0 -2px 1px hsl(184, 80%, 15%),
+    1px -2px 1px hsl(184, 80%, 15%), 2px -2px 1px hsl(184, 80%, 15%),
+    2px -1px 1px hsl(184, 80%, 15%), 2px 0 1px hsl(184, 80%, 15%),
+    2px 1px 1px hsl(184, 80%, 15%), -2px 0 1px hsl(184, 80%, 15%),
+    -2px -1px 1px hsl(184, 80%, 15%), -2px 1px 1px hsl(184, 80%, 15%),
+    /*dark shadow*/ 2px 2px 2px hsl(184, 80%, 5%), 1px 2px 2px hsl(184, 80%, 5%),
+    0 2px 2px hsl(184, 80%, 5%), -1px 2px 2px hsl(184, 80%, 5%),
+    -2px 2px 2px hsl(184, 80%, 5%);
+}
 .left-col #header .header-smart-menu {
-  font-size: 12px;
   margin-bottom: 20px;
+  width: 300px;
+  height: 20px;
+  position: relative;
+  left: 50%;
+  margin-left: -150px;
+  background-image: -webkit-linear-gradient(
+    left,
+    blue,
+    #66ffff 10%,
+    #cc00ff 20%,
+    #cc00cc 30%,
+    #ccccff 40%,
+    #00ffff 50%,
+    #ccccff 60%,
+    #cc00cc 70%,
+    #cc00ff 80%,
+    #66ffff 90%,
+    blue 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s linear infinite;
+  font-size: 15px;
+}
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }
 .left-col #header .header-smart-menu a:after {
   content: "/";
@@ -1639,7 +1700,7 @@ pre .id {
   margin: 0 30px;
   padding-right: 60px;
   border-bottom: 1px solid #eee;
-  background: #fff;
+  background: #f0ffff;
 }
 .archives-wrap:first-child {
   margin-top: 30px;
@@ -1788,7 +1849,7 @@ pre .id {
 .tools-col .tools-wrap {
   height: 100%;
   color: #e5e5e5;
-  width: 360px;
+  width: 320px;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -1802,16 +1863,16 @@ pre .id {
   position: relative;
 }
 .tools-col .tools-section .search-wrap .search-ipt {
-  width: 310px;
-  color: #fff;
+  width: 300px;
+  color: #000;
   background: none;
   border: none;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #000000;
   font-family: Roboto, serif;
 }
 .tools-col .tools-section .search-wrap .icon {
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 7px;
   color: #fff;
   cursor: pointer;
@@ -1831,6 +1892,7 @@ pre .id {
   font-size: 12px;
   float: right;
   margin: 4px 75px 0 0;
+  color: #000;
 }
 .tools-col .tools-section .search-tag.tagcloud .search-switch {
   width: 40px;
@@ -1928,20 +1990,20 @@ pre .id {
   white-space: nowrap;
   text-overflow: ellipsis;
   display: block;
-  color: #fffff8;
+  color: #000000;
   text-shadow: 1px 1px rgba(77, 77, 77, 0.25);
 }
 .tools-col .tools-section .search-ul .search-title .icon {
   margin-right: 10px;
-  color: #fffdd8;
+  color: #00624b;
 }
 .tools-col .tools-section .search-ul .search-title:hover {
-  color: #fff;
+  color: #72ecbf;
 }
 .tools-col .tools-section .search-ul .search-tag,
 .tools-col .tools-section .search-ul .search-time {
   font-size: 12px;
-  color: #fffdd8;
+  color: #00624b;
   margin-right: 10px;
 }
 .tools-col .tools-section .search-ul .search-tag .icon,
@@ -2157,7 +2219,7 @@ pre .id {
   margin: 0 0 1.75em;
 }
 .article-inner {
-  background-color: rgba(193, 194, 195, 0.6);
+  background-color: rgba(240, 255, 255, 0.6);
 }
 .article-inner h1 {
   font-size: 28px;

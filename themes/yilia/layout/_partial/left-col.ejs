@@ -48,7 +48,7 @@
     z-index: 1000;
   }
 </style>
-<% } %> <% var defaultBg = '#4d4d4d'; %> <% var defaultBgImg = '/img/xqtd.gif';
+<% } %> <% var defaultBg = '#D3D1DC'; %> <% var defaultBgImg = '/img/xqtd.gif';
 %> <% var overlayBgImg= theme.style.gif && theme.style.gif.enable &&
 theme.style.gif.path ? theme.style.gif.path : defaultBgImg; %>
 
@@ -77,7 +77,7 @@ theme.style.gif.path ? theme.style.gif.path : defaultBgImg; %>
         <%}%>
       </ul>
     </nav>
-    <nav>总文章数 <%=site.posts.length%></nav>
+    <nav class="totalTopic">总文章数 <%=site.posts.length%></nav>
     <nav class="header-smart-menu">
       <% for (var i in theme.smart_menu){ %> <% if(theme.smart_menu[i]){ %>
       <a q-on="click: openSlider(e, '<%-i%>')" href="javascript:void(0)"
