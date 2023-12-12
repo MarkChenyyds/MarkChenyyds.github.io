@@ -6,7 +6,7 @@
   <link href="https://markchenyyds.github.io/atom.xml" rel="self"/>
   
   <link href="https://markchenyyds.github.io/"/>
-  <updated>2023-12-08T07:24:01.481Z</updated>
+  <updated>2023-12-12T02:53:09.663Z</updated>
   <id>https://markchenyyds.github.io/</id>
   
   <author>
@@ -17,26 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test 圣诞到了，帮修改一个头像</title>
-    <link href="https://markchenyyds.github.io/article/8bae60c8.html"/>
-    <id>https://markchenyyds.github.io/article/8bae60c8.html</id>
-    <published>2012-12-19T06:48:00.000Z</published>
-    <updated>2023-12-08T07:24:01.481Z</updated>
+    <title>使用PicGo实现Tpora图片自动上传github</title>
+    <link href="https://markchenyyds.github.io/article/8364e9c6.html"/>
+    <id>https://markchenyyds.github.io/article/8364e9c6.html</id>
+    <published>2023-12-10T16:00:00.000Z</published>
+    <updated>2023-12-12T02:53:09.663Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/assets/blogImg/xmas_ico0.jpg" alt="ico原来的样子"></p><blockquote><p>帮忙把这只狐狸塞到圣诞袜子里或者带上圣诞帽~~~~ ——鱼头😊 ?</p></blockquote><span id="more"></span><p>鱼头君，我终于做好了！花了我整整……好吧，其实是一直偷懒没做我就承认了。<br>按照你的要求，弄成这样的：<br><img src="/assets/blogImg/xmas_ico1.jpg" alt="狐狸妹纸太大我塞不下-_-!"></p><p>或者这样的：<br><img src="/assets/blogImg/xmas_ico2.jpg" alt="圣诞帽的狐狸妹纸"><br>其实我最喜欢的是这样的：<br><img src="/assets/blogImg/xmas_ico3.jpg" alt="呆萌傻缺才是我得菜好么"></p><p><strong>Happy Chrismas!</strong></p><hr><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/assets/blogImg/xmas_ico0.jpg&quot; alt=&quot;ico原来的样子&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;帮忙把这只狐狸塞到圣诞袜子里或者带上圣诞帽~~~~ ——鱼头😊 ?&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+    <content type="html"><![CDATA[<h1>新建仓库并且创建 token</h1><h2 id="新建仓库">新建仓库</h2><p>在 github 新建一个仓库，属性需要设置为 public，这样第三方软件（PicGo）才能访问。</p><h2 id="创建-token">创建 token</h2><p>在 github 网页点击头像-&gt;Setting-&gt;Developer Settings-&gt;Personal access tokens-&gt;Tokens(classic)，设置永久期限，勾选 repo，点击生成 token，记得赶紧保存好 token，不然就看不到了。</p><span id="more"></span><h1>下载并配置 PicGo</h1><p><img src="https://cdn.jsdelivr.net/gh/MarkChenyyds/resources@main//hexo-blog/202312112130960.png" alt="屏幕快照 2023-12-11 的 21.30.15 下午"></p><p>按照上图设置，打开时间戳重命名和上传后自动复制 URL，图床只选择 github。</p><p><img src="https://cdn.jsdelivr.net/gh/MarkChenyyds/resources@main//hexo-blog/202312112143464.png" alt="屏幕快照 2023-12-11 的 21.43.33 下午"></p><p>几个要点：</p><ul><li>设定仓库名：Github 用户名/仓库名</li><li>设定 Token：复制粘贴上面的 token</li><li>设置自定义域名：使用 CDN 加速，<a href="https://cdn.jsdelivr.net/gh/username/repository@branch/">https://cdn.jsdelivr.net/gh/username/repository@branch/</a></li></ul><h1>配置 Tpora</h1><p>打开设置-&gt;图像</p><p><img src="https://cdn.jsdelivr.net/gh/MarkChenyyds/resources@main//hexo-blog/202312112203896.png" alt="屏幕快照 2023-12-11 的 21.52.49 下午"></p><p>上传服务设定，选择 PicGo.app，点击验证图片上传选项，可以试验是否能够上传。</p>]]></content>
     
     
+    <summary type="html">&lt;h1&gt;新建仓库并且创建 token&lt;/h1&gt;
+&lt;h2 id=&quot;新建仓库&quot;&gt;新建仓库&lt;/h2&gt;
+&lt;p&gt;在 github 新建一个仓库，属性需要设置为 public，这样第三方软件（PicGo）才能访问。&lt;/p&gt;
+&lt;h2 id=&quot;创建-token&quot;&gt;创建 token&lt;/h2&gt;
+&lt;p&gt;在 github 网页点击头像-&amp;gt;Setting-&amp;gt;Developer Settings-&amp;gt;Personal access tokens-&amp;gt;Tokens(classic)，设置永久期限，勾选 repo，点击生成 token，记得赶紧保存好 token，不然就看不到了。&lt;/p&gt;</summary>
     
     
-    <category term="设计" scheme="https://markchenyyds.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
-    <category term="杂谈" scheme="https://markchenyyds.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="Typora" scheme="https://markchenyyds.github.io/tags/Typora/"/>
+    
+    <category term="PicGo" scheme="https://markchenyyds.github.io/tags/PicGo/"/>
+    
+    <category term="图片自动上传" scheme="https://markchenyyds.github.io/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0/"/>
     
   </entry>
   
