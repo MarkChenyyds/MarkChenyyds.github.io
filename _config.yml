@@ -190,12 +190,15 @@ markdown:
     # explicitFigures: true
 
   plugins:
+    # - markdown-it-table-of-contents
     - markdown-it-abbr
     - markdown-it-footnote
     - markdown-it-ins
     - markdown-it-sub
     - markdown-it-sup
     - markdown-it-emoji # add emoji
+  # toc:
+  #   includeLevel: [2, 3] # 设置目录的层级范围
   anchors:
     # Minimum level for ID creation. (Ex. h2 to h6)
     level: 2

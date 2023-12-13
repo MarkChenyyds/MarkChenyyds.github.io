@@ -3,12 +3,9 @@ title: Mac配置git，ssh
 tags:
   - git
   - ssh
+toc: true
 abbrlink: 24cea3fc
 ---
-
-[toc]
-
-
 
 ```
 //生成公钥

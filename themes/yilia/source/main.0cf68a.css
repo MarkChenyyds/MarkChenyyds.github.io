@@ -725,9 +725,17 @@ i {
 }
 .icon-circle-left:before {
   content: "\E71F";
+  color: #00dd9e;
 }
 .icon-circle-right:before {
   content: "\E720";
+  color: #00dd9e;
+}
+.icon-circle-left:hover:before {
+  color: #005736;
+}
+.icon-circle-right:hover:before {
+  color: #005736;
 }
 .icon-loading:before {
   content: "\E614";
@@ -2040,7 +2048,10 @@ pre .id {
 .tools-col .tools-section-friends {
   padding-top: 30px;
 }
-.tools-col .aboutme-wrap {
+
+/* aboutme特效 */
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+.tools-section-me {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2052,9 +2063,37 @@ pre .id {
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: #fffdd8;
-  text-shadow: 1px 1px rgba(77, 77, 77, 0.45);
 }
+.aboutme-container-container {
+  width: 100%;
+  height: 100px;
+}
+.aboutme-container {
+  /*Centerthetextintheviewport.*/
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  /*Thisfilterisalotofthemagic,trycommentingitouttoseehowthemorphingworks!*/
+  filter: url(#threshold) blur(0.6px);
+  -webkit-filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#js-aboutme1,
+#js-aboutme2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+
+  font-family: "Raleway", sans-serif !important;
+  font-size: 60px;
+  color: rgb(133, 232, 184);
+  text-align: center;
+  /* top: 50px; */
+  user-select: none;
+}
+/* aboutme特效end */
 .body-wrap > article {
   position: relative;
 }
@@ -2627,10 +2666,11 @@ pre .id {
   display: inline-block;
   font-size: 16px;
   transition: color 0.3s;
+  color: #00dd9e;
 }
 #article-nav .article-nav-link-wrap:hover .article-nav-title,
 #article-nav .article-nav-link-wrap:hover i {
-  color: #4d4d4d;
+  color: #005736;
 }
 #article-nav #article-nav-older {
   float: right;
@@ -2879,7 +2919,7 @@ pre .id {
   color: #045842;
 }
 .toc-container.tooltip-left {
-  background: #ccc;
+  background: #78ffe6;
   margin-top: 10px;
   transition: 0.3s;
 }
@@ -2905,7 +2945,8 @@ pre .id {
   min-width: 200px;
   width: auto;
   font-size: 14px;
-  text-shadow: 1px 1px 1px #398199;
+  text-shadow: 1px 1px 1px #045842;
+  background: #045842;
   bottom: -10px;
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
@@ -2916,9 +2957,12 @@ pre .id {
   color: #fff;
 }
 .toc-container.tooltip-left .tooltip-east .tooltip-content:after {
+  /* background: #045842; */
   top: auto;
   bottom: 23px;
+  /* color: #045842; */
 }
+
 .toc-container.tooltip-left .tooltip-east .tooltip-content .toc-article {
   max-height: 500px;
   overflow-x: hidden;
@@ -2968,8 +3012,8 @@ pre .id {
 }
 .tooltip-left .tooltip-content {
   position: absolute;
-  background: rgba(36, 193, 246, 0.9);
-  z-index: 9999;
+  background: #045842;
+  z-index: 999;
   width: 200px;
   bottom: 50%;
   margin-bottom: -10px;
@@ -3097,7 +3141,7 @@ pre .id {
   transform: scaleX(1);
 }
 .tooltip-top .tooltip-inner {
-  background: rgba(36, 193, 246, 0.9);
+  background: rgba(88, 248, 214, 0.9);
   padding: 40px;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);

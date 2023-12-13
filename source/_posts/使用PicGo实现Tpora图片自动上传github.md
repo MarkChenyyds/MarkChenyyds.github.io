@@ -1,18 +1,13 @@
 ---
-abbrlink: '0'
----
----
-​---
-title:使用PicGo实现Tpora图片自动上传github
-date:2023-12-11
-tags：
+title: 使用PicGo实现Tpora图片自动上传github
+tags:
   - Typora
   - PicGo
   - 图片自动上传
-​---
+toc: true
+abbrlink: 8364e9c6
+date: 2023-12-11 00:00:00
 ---
-
-[toc]
 
 # 新建仓库并且创建token
 
