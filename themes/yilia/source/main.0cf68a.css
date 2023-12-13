@@ -685,6 +685,7 @@ i {
 }
 .icon-search:before {
   content: "\E65B";
+  color: #007554;
 }
 .icon-smile:before {
   content: "\E64A";
@@ -736,6 +737,7 @@ i {
 }
 .icon-close:before {
   content: "\E60C";
+  color: #007554;
 }
 .icon-tumblr:before {
   content: "\E6B0";
@@ -748,6 +750,7 @@ i {
 }
 .icon-price-tags:before {
   content: "\E6F9";
+  color: #02936a;
 }
 .icon-quo-left:before {
   content: "\E7F5";
@@ -926,7 +929,7 @@ html {
   -webkit-box-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  /* 1 */
+  /* new */
   background: #eee
     url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC)
     repeat;
@@ -1419,7 +1422,7 @@ pre .id {
   float: left;
 }
 .archive-article-date {
-  color: #999;
+  color: #52e1c4;
   margin-right: 7.6923%;
   float: right;
 }
@@ -1717,9 +1720,16 @@ pre .id {
   z-index: 1;
 }
 .archives-wrap .archive-year-wrap a {
-  color: #666;
+  color: #000000;
   font-weight: 700;
   padding-left: 48px;
+  background: #eee
+    url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC)
+    repeat;
+  text-shadow: 5px -5px rgb(0, 0, 0), 4px -4px white;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 .archives {
   position: relative;
@@ -1730,8 +1740,8 @@ pre .id {
 .archives .archive-article {
   margin-left: 200px;
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #fff;
+  border-bottom: 1px solid #1fffa5;
+  border-top: 1px solid #ffffff;
   position: relative;
 }
 .archives .archive-article:first-child {
@@ -1782,7 +1792,7 @@ pre .id {
   width: auto;
 }
 .archive-article-inner .article-meta .article-date time {
-  color: #aaa;
+  color: #52e1c4;
 }
 .archive-article-inner .article-meta .archive-article-date,
 .archive-article-inner .article-meta .article-tag-list {
@@ -1864,11 +1874,14 @@ pre .id {
 }
 .tools-col .tools-section .search-wrap .search-ipt {
   width: 300px;
-  color: #000;
+  color: #007554;
   background: none;
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #007554;
   font-family: Roboto, serif;
+}
+.tools-col .tools-section .search-wrap .search-ipt::placeholder {
+  color: #59dfa9;
 }
 .tools-col .tools-section .search-wrap .icon {
   position: absolute;
@@ -1892,7 +1905,7 @@ pre .id {
   font-size: 12px;
   float: right;
   margin: 4px 75px 0 0;
-  color: #000;
+  color: #007554;
 }
 .tools-col .tools-section .search-tag.tagcloud .search-switch {
   width: 40px;
@@ -1990,15 +2003,15 @@ pre .id {
   white-space: nowrap;
   text-overflow: ellipsis;
   display: block;
-  color: #000000;
-  text-shadow: 1px 1px rgba(77, 77, 77, 0.25);
+  color: #00624b;
+  text-shadow: 1px 1px rgba(180, 197, 188, 0.5);
 }
 .tools-col .tools-section .search-ul .search-title .icon {
   margin-right: 10px;
   color: #00624b;
 }
 .tools-col .tools-section .search-ul .search-title:hover {
-  color: #72ecbf;
+  color: #ffffff;
 }
 .tools-col .tools-section .search-ul .search-tag,
 .tools-col .tools-section .search-ul .search-time {
@@ -2081,27 +2094,180 @@ pre .id {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   /*background: #fff;*/
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(240, 255, 255, 0.9);
   transition: all 0.2s ease-in;
 }
 .article img {
   max-width: 100%;
 }
-.article-inner h1.article-title,
-.article-title {
-  color: #696969;
-  margin-left: 0;
-  font-weight: 300;
-  line-height: 35px;
-  margin-bottom: 20px;
-  font-size: 26px;
-  transition: color 0.3s;
+.article-inner h1.article-title .myTitle,
+.article-title .myTitle {
+  color: rgb(1, 103, 60);
+  font-size: 1.2em;
+  width: 25em;
+  height: 1.2em;
+  border-right: 1px solid transparent;
+  animation: typing 2s steps(42, end), blink-caret 0.75s step-end infinite;
+  font-family: Consolas, Monaco;
+  word-break: break-all;
+  overflow: hidden;
+}
+/* 打印效果 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 25em;
+  }
+}
+
+/* 光标 */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: currentColor;
+  }
 }
 .article-header {
-  border-left: 5px solid #4d4d4d;
+  border-left: 5px solid #006036;
   padding: 30px 0 15px 25px;
   padding-left: 7.6923%;
 }
+.article-header .word .content {
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  color: #52e1c4;
+}
+.article-header .word .content .content_container {
+  font-weight: 600;
+  overflow: hidden;
+  height: 20px;
+}
+
+.article-header .word .content .content_container:after,
+.article-header .word .content .content_container:before {
+  position: relative;
+  top: 0;
+
+  color: #52e1c4;
+  font-size: 15px;
+  line-height: 15px;
+
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.article-header .word .content .content_container .content_container_text {
+  display: inline;
+  float: left;
+  margin: 0;
+}
+.article-header .word .content .content_container .content_container_list {
+  margin-top: 0;
+  text-align: left;
+  list-style: none;
+
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.article-header
+  .word
+  .content
+  .content_container
+  .content_container_list
+  .content_container_list_item {
+  line-height: 20px;
+  margin: 0;
+}
+@keyframes change {
+  /* 0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  } */
+  0%,
+  48%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+  }
+
+  50%,
+  98% {
+    transform: translate3d(0, -50%, 0);
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    -o-transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+/* // 6 is the number of animation.
+// Here, there are 4 lines :
+
+// 1 to 2
+// 2 to 3
+// 3 to 4
+// 4 to 3
+// 3 to 2
+// 2 to 1
+
+// 6x + 6y = 100 (100% duration)
+
+// HERE : 
+// y = 4 -> Animation between two lines
+// x = 12.66 -> Time spent on a line
+
+// You can define a value and calculate the other if you want change speed or the number of lines */
+
 .article-meta {
   width: 150px;
   font-size: 14;
@@ -2112,8 +2278,14 @@ pre .id {
   text-align: center;
   z-index: 1;
 }
-.article-meta time {
-  color: #aaa;
+/* 日期小图标样式 */
+.archives
+  .archive-article
+  .archive-article-inner
+  .archive-article-header
+  .article-meta
+  time {
+  color: #52e1c4;
 }
 .article-meta time .icon-clock {
   margin-right: 8px;
@@ -2155,10 +2327,10 @@ pre .id {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(1, 255, 136, 0);
   position: relative;
   /* 在鼠标悬浮时为：蓝色 */
-  background: #2098d1;
+  background: #1a6455;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.4s;
@@ -2173,7 +2345,7 @@ pre .id {
   left: 0;
   right: 0;
   /* 在默认情况下为：灰褐色 */
-  background: #4d4d4d;
+  background: #00dd9e;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   -webkit-transform-origin: 50%;
@@ -2219,7 +2391,7 @@ pre .id {
   margin: 0 0 1.75em;
 }
 .article-inner {
-  background-color: rgba(240, 255, 255, 0.6);
+  background-color: rgba(240, 255, 255, 0.8);
 }
 .article-inner h1 {
   font-size: 28px;
@@ -2282,6 +2454,15 @@ pre .id {
   line-height: 1.8em;
   padding-right: 7.6923%;
   padding-left: 7.6923%;
+}
+.article-entry .article-more-a {
+  color: #00ce9e;
+}
+.article-entry .article-more-a::after {
+  background-color: #00ce9e;
+}
+.article-entry .article-more-a:hover {
+  color: #00291f;
 }
 .article-entry p {
   margin-top: 10px;
@@ -2654,7 +2835,7 @@ pre .id {
   text-align: center;
 }
 .jump-container:hover .icon-back {
-  background: rgba(36, 193, 246, 0.9);
+  background: rgba(4, 98, 75, 0.9);
 }
 .jump-container,
 .toc-container {
@@ -2683,8 +2864,8 @@ pre .id {
 }
 .mod-side-operation__jump-to-top .icon-back {
   transition: 0.3s;
-  color: #fff;
-  background: #ccc;
+  color: #ffffff;
+  background: #78ffe6;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   font-size: 32px;
@@ -2694,8 +2875,8 @@ pre .id {
   display: block;
 }
 .mod-side-operation__jump-to-top .icon-back:hover {
-  background: #24c1f6;
-  color: #24c1f6;
+  background: #045842;
+  color: #045842;
 }
 .toc-container.tooltip-left {
   background: #ccc;
@@ -2703,7 +2884,7 @@ pre .id {
   transition: 0.3s;
 }
 .toc-container.tooltip-left:hover {
-  background: rgba(36, 193, 246, 0.9);
+  background: rgba(4, 98, 75, 0.9);
 }
 .toc-container.tooltip-left .icon-font {
   font-size: 22px;
@@ -3235,16 +3416,7 @@ pre .id {
     padding-right: 60px;
     border-bottom: 1px solid #eee;
     /*background: #fff;*/
-    background-color: rgba(236, 236, 236, 0.6);
-  }
-  .archives-wrap .archive-article-title {
-    font-size: 16px;
-    font-weight: bold;
-    /*color: #333;*/
-    /*transition: color .3s*/
-    background: transparent;
-    text-decoration: none;
-    color: #af9;
+    background-color: rgba(240, 255, 255, 0.9);
   }
   .archives-wrap .archive-year-wrap {
     position: relative;
@@ -3265,6 +3437,7 @@ pre .id {
     padding: 10px 0;
     margin-left: 0;
   }
+
   #footer {
     position: relative;
     bottom: 0;
@@ -3975,4 +4148,35 @@ img.emoji {
   width: 1em;
   margin: 0 0.05em 0 0.1em;
   vertical-align: -0.1em;
+}
+/* 归档列表标题 */
+.archives .archive-article-title .myTitle {
+  position: relative;
+  background-image: -webkit-linear-gradient(
+    left,
+    blue,
+    #66ffff 10%,
+    #cc00ff 20%,
+    #cc00cc 30%,
+    #ccccff 40%,
+    #00ffff 50%,
+    #ccccff 60%,
+    #cc00cc 70%,
+    #cc00ff 80%,
+    #66ffff 90%,
+    blue 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: new-masked-animation 4s linear infinite;
+  font-size: 35px;
+}
+@keyframes new-masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }

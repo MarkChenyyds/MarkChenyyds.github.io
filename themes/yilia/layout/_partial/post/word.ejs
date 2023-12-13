@@ -1,4 +1,4 @@
-<div style="margin-top: 10px">
+<!-- <div style="margin-top: 10px" class="word">
   <span class="post-time">
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
@@ -15,4 +15,36 @@
       <span class="post-count"><%= min2read(post.content) %>分</span>
     </span>
   </span>
+</div> -->
+<div style="margin-top: 10px" class="word">
+  <!-- <div class="post-time">
+    字数统计:<%= wordcount(post.content) %>字&nbsp;|&nbsp;预计阅读时长:<%=
+    min2read(post.content) %>分
+  </div> -->
+  <!-- <div class="content">
+    <div class="content_container">
+      <p class="content_container_text">Hello</p>
+
+      <ul class="content_container_list">
+        <li class="content_container_list_item">world !</li>
+        <li class="content_container_list_item">bob !</li>
+        <li class="content_container_list_item">users !</li>
+        <li class="content_container_list_item">everybody !</li>
+      </ul>
+    </div>
+  </div> -->
+  <div class="content">
+    <div class="content_container">
+      <!-- <p class="content_container_text">Hello</p> -->
+
+      <ul class="content_container_list">
+        <li class="content_container_list_item">
+          字数统计:<%= wordcount(post.content) %>字
+        </li>
+        <li class="content_container_list_item">
+          预计阅读时长:<%= min2read(post.content) %>分
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
