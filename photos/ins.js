@@ -139,7 +139,7 @@
             src += "";
 
             liTmpl +=
-              '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
+              '<figure class="thumb" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">\
                 <a href="' +
               src +
               '" itemprop="contentUrl" data-size="1080x1080" data-type="' +
@@ -160,18 +160,18 @@
           }
           ulTmpl =
             ulTmpl +
-            '<section class="archives album"><h1 class="year">' +
+            '<section class="archives album"><h1 class="year"><span id="datayear-年-datamonth-月">' +
             data.year +
             "年<em>" +
             data.month +
-            '月</em></h1>\
+            '月</em></span></h1>\
         <ul class="img-box-ul">' +
             liTmpl +
             "</ul>\
         </section>";
         }
         document.querySelector(".instagram").innerHTML =
-          '<div class="photos" itemscope="" itemtype="http://schema.org/ImageGallery">' +
+          '<div class="photos" itemscope itemtype="http://schema.org/ImageGallery">' +
           ulTmpl +
           "</div>";
         createVideoIncon();
