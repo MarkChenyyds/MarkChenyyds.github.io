@@ -35,7 +35,7 @@
     "live2d-widget-model-nipsilon": "^1.0.5",
     "live2d-widget-model-wanko": "^1.0.5",
     "markdown-it": "latest",
-    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-emoji": "^3.0.0",
     "markdown-it-table-of-contents": "^0.6.0",
     "twemoji": "^14.0.2"
   }
